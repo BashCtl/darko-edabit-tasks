@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 import static org.testng.Assert.assertEquals;
 
@@ -11,6 +12,7 @@ public class CountNumberOfDuplicateCharacters {
 
     public static int duplicateCount(String str) {
         String[] strings = str.split("");
+
         return (int) Arrays.stream(strings).distinct()
                 .filter(s -> Collections.frequency(Arrays.asList(strings), s) > 1)
                 .count();
