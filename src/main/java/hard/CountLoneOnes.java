@@ -9,17 +9,18 @@ public class CountLoneOnes {
     public static int countLoneOnes(long n) {
         String num = String.valueOf(n);
         int count = 0;
-        for (int i = 0; i < num.length() -1; i++) {
+        for (int i = 0; i < num.length() - 1; i++) {
             if (num.charAt(i) == '1') {
-                if(i==0&& num.charAt(i+1)!='1'){
+                if (i == 0 && num.charAt(i + 1) != '1') {
                     count++;
-                }else
-                if(num.charAt(i-1)!='1' && num.charAt(i+1)!='1'){
+                } else if (i != 0 && num.charAt(i - 1) != '1' && num.charAt(i + 1) != '1') {
                     count++;
                 }
+            } else if (i == num.length() - 2 && num.charAt(i + 1) == '1') {
+                count++;
             }
         }
-        return count;
+        return !num.equals("1")?count: num.length();
     }
 
     @Test
