@@ -14,7 +14,7 @@ public class MoneyFormatting {
 
     public static String dolladollaBills(double money){
         NumberFormat numberFormat = NumberFormat.getCurrencyInstance(Locale.US);
-        return numberFormat.format(money);
+        return numberFormat.format(money).toString();
     }
 
     private double[] numVector = new double[] {10, 31.4159, -56.99, -0.008, 0.05, 1000000, -314159.2653};
