@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 /*
 Word Chain 2.0
-Let's update our previous word-chain definition. In this 2.0 version, a word-chain is an array of words, where the next word is formed by either:
+Let's update our previous word-chain definition. In this 2.0 version,
+a word-chain is an array of words, where the next word is formed by either:
 
 Changing exactly one letter from the previous word.
 Adding or subtracting one letter.
